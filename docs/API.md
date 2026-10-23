@@ -35,7 +35,7 @@ lose that deleted worker's unfinished local contribution. Stopped instances stil
 reserve workload worker slots as well as their resource quotas. In the production
 game, stopped time incurs no electricity or lifecycle allocation.
 
-Use exo **1.95.6**, the pinned tested CLI. The downloaded `greenops-exo.json` already contains the account endpoint. After checking `/path/to/exo version`, run:
+Use exo **1.95.6**, the pinned tested CLI. The downloaded `greenops-exo-<run-id>.json` contains the account endpoint. Rename it to `greenops-exo.json` in your starter folder for these commands. After checking `/path/to/exo version`, run:
 
 ```sh
 /path/to/exo -C greenops-exo.json -O json zone

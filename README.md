@@ -13,7 +13,8 @@ Sign in at [greenops.containerstack.net](https://greenops.containerstack.net),
 create or join a team, then click **New simulation run**.
 
 Open that run’s **API credentials → Download CLI config** to download
-`greenops-exo.json`. Python, Go and Terraform examples all use this file.
+`greenops-exo-<run-id>.json`. The ID is the first 10 characters of your run.
+Python, Go and Terraform examples all use this file.
 Keep it private; it contains your run’s access keys.
 
 ## 2. Get the starter
@@ -25,7 +26,8 @@ git clone https://github.com/exogmi/greenops-challenge-starter-kit.git
 cd greenops-challenge-starter-kit
 ```
 
-Move `greenops-exo.json` into this folder. It is ignored by Git.
+Move the downloaded JSON file into this folder and rename it to
+`greenops-exo.json`. It is ignored by Git.
 
 ## 3. Open the development environment
 
