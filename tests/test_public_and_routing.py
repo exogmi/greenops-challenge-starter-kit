@@ -26,7 +26,7 @@ class PublicAndRouting(unittest.TestCase):
     def test_public_exports_have_only_public_catalog_and_matching_hashes(self):
         catalog = json.loads((ROOT / "challenge/catalog.json").read_text())
         self.assertEqual(len(catalog["workloads"]), 15)
-        self.assertIn("-workloads-v5-", catalog["scenario_id"])
+        self.assertRegex(catalog["scenario_id"], r"^pack-[a-f0-9]{10}$")
         self.assertEqual(sum(int(w["required_work"]) for w in catalog["workloads"] if w["kind"] == "cpu"), 14600)
         plan = json.loads((ROOT / "examples/static-plan.json").read_text())
         self.assertEqual(plan["scenario_id"], catalog["scenario_id"])

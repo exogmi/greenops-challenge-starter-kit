@@ -170,3 +170,8 @@ Current public `rules.json` advertises `greenops-score-v2` and
 used in points and tie-breaking. `total_gco2e` still includes usage plus lifecycle;
 the two component fields retain their meaning. Legacy v1 run/rules responses
 remain supported. Use the scenario and cohort matching your run.
+
+The catalog's `scenario_id` is a short opaque workload pack reference (`pack-…`),
+matching the website and the exported rules, manifest and example plan. Treat it
+as a label, not a description of the workloads or a scoring/content hash. Workload
+IDs used to bind VMs remain unchanged.

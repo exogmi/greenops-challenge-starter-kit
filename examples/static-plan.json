@@ -1,5 +1,5 @@
 {
-  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-usage-score-v2-lca-v1",
+  "scenario_id": "pack-40218962a6",
   "placements": [
     {
       "name": "baseline-cpu",

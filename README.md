@@ -78,3 +78,5 @@ run instructions through the website when you have a result to submit.
 
 [Native installation and troubleshooting](docs/DEVELOPMENT.md) ·
 [Verification](docs/VERIFICATION.md) · [Third-party software](docs/THIRD_PARTY.md)
+
+Platform trouble? [Report a technical problem](mailto:greenops.challenge@exoscale.ch).
