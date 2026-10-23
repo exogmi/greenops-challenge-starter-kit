@@ -1,7 +1,7 @@
 # GreenOps Challenge starter
 
 Build a program that chooses when and where cloud workloads run, and reduce their
-electricity emissions. **Your code runs on your computer and controls our simulator through
+carbon impact. **Your code runs on your computer and controls our simulator through
 APIs. The website shows its progress and results.**
 
 Start with this demo: it schedules one CPU workload and one GPU workload. Then

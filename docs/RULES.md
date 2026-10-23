@@ -1,12 +1,3 @@
-# Current scoring: electricity usage
-
-Current runs use **greenops-score-v2**: points and carbon tie-breaks count electricity
-usage emissions only, including boot, staging, idle, unbound and lost-work usage.
-Infrastructure & lifecycle emissions remain in the displayed total footprint and
-do not affect points. Work progress, delivery bonus, reference weights and quality
-formula are retained. Older runs retain their original policy/cohort unless an
-organizer explicitly rescores them. Compare scores within the same cohort.
-
 # Participant rules: reactive orchestration
 
 These are the sponsor's competition rules, revised 20 October 2026. The scoring coefficients remain a separate rules-freeze item; these information-access rules apply regardless of the final formula.

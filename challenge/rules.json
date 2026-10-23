@@ -1,10 +1,9 @@
 {
-  "cohort": "greenops-score-v2:baa012c94fb9a9626337151649bd2987fdca585b7230cf1bca03ff0d120b762f:48e6c674e94bad8ba49b2d28617b4cee600dd7571f3547fd1b99e34f60bf19f5",
+  "cohort": "greenops-score-v1:049d77a5df2fc3dcd0cfbb9044a6b2efa81b096db667735c1fd477c696656698:194062d2363464dc85467f2b17c1bb32ba88da808efbb9f550762712699034e2",
   "enabled": true,
   "rules": {
-    "impact_basis": "electricity_usage",
-    "version": "greenops-score-v2",
-    "hash": "48e6c674e94bad8ba49b2d28617b4cee600dd7571f3547fd1b99e34f60bf19f5",
+    "version": "greenops-score-v1",
+    "hash": "194062d2363464dc85467f2b17c1bb32ba88da808efbb9f550762712699034e2",
     "reference_energy_kwh": {
       "w-01-dach-research": "26.400",
       "w-02-ch-reporting": "25.344",
@@ -28,5 +27,5 @@
     "local_weight": "3/4",
     "shared_weight": "1/4"
   },
-  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-usage-score-v2-lca-v1"
+  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-lca-v1"
 }

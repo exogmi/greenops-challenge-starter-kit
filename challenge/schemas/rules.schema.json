@@ -25,10 +25,7 @@
       ],
       "properties": {
         "version": {
-          "enum": [
-            "greenops-score-v1",
-            "greenops-score-v2"
-          ]
+          "const": "greenops-score-v1"
         },
         "hash": {
           "type": "string",
@@ -116,33 +113,8 @@
         },
         "shared_weight": {
           "const": "1/4"
-        },
-        "impact_basis": {
-          "const": "electricity_usage"
         }
-      },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "version": {
-                "const": "greenops-score-v2"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "impact_basis"
-            ]
-          },
-          "else": {
-            "properties": {
-              "impact_basis": false,
-              "scored_gco2e": false
-            }
-          }
-        }
-      ]
+      }
     },
     "cohort": {
       "type": "string"

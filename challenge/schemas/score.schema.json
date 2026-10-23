@@ -5,10 +5,7 @@
   "additionalProperties": false,
   "properties": {
     "version": {
-      "enum": [
-        "greenops-score-v1",
-        "greenops-score-v2"
-      ]
+      "const": "greenops-score-v1"
     },
     "rules_hash": {
       "type": "string"
@@ -67,10 +64,6 @@
           "lifecycle_gco2e": {
             "type": "string",
             "pattern": "^[0-9]+(?:\\.[0-9]+)?$"
-          },
-          "scored_gco2e": {
-            "type": "string",
-            "pattern": "^\\d+\\.\\d{6}$"
           }
         },
         "required": [
@@ -89,13 +82,6 @@
     "lifecycle_gco2e": {
       "type": "string",
       "pattern": "^[0-9]+(?:\\.[0-9]+)?$"
-    },
-    "impact_basis": {
-      "const": "electricity_usage"
-    },
-    "scored_gco2e": {
-      "type": "string",
-      "pattern": "^\\d+\\.\\d{6}$"
     }
   },
   "required": [
@@ -108,41 +94,5 @@
     "total",
     "total_gco2e",
     "contributions"
-  ],
-  "allOf": [
-    {
-      "if": {
-        "properties": {
-          "version": {
-            "const": "greenops-score-v2"
-          }
-        }
-      },
-      "then": {
-        "required": [
-          "impact_basis",
-          "scored_gco2e",
-          "usage_gco2e",
-          "lifecycle_gco2e"
-        ],
-        "properties": {
-          "contributions": {
-            "items": {
-              "required": [
-                "scored_gco2e",
-                "usage_gco2e",
-                "lifecycle_gco2e"
-              ]
-            }
-          }
-        }
-      },
-      "else": {
-        "properties": {
-          "impact_basis": false,
-          "scored_gco2e": false
-        }
-      }
-    }
   ]
 }
