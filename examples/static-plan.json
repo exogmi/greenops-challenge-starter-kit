@@ -1,0 +1,19 @@
+{
+  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-lca-v1",
+  "placements": [
+    {
+      "name": "baseline-cpu",
+      "workload_id": "w-01-dach-research",
+      "zone": "at-vie-1",
+      "family": "cpu",
+      "size": "huge"
+    },
+    {
+      "name": "baseline-gpu",
+      "workload_id": "w-08-ch-imaging",
+      "zone": "ch-gva-2",
+      "family": "gpua30",
+      "size": "small"
+    }
+  ]
+}

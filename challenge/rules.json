@@ -1,0 +1,31 @@
+{
+  "cohort": "greenops-score-v1:049d77a5df2fc3dcd0cfbb9044a6b2efa81b096db667735c1fd477c696656698:194062d2363464dc85467f2b17c1bb32ba88da808efbb9f550762712699034e2",
+  "enabled": true,
+  "rules": {
+    "version": "greenops-score-v1",
+    "hash": "194062d2363464dc85467f2b17c1bb32ba88da808efbb9f550762712699034e2",
+    "reference_energy_kwh": {
+      "w-01-dach-research": "26.400",
+      "w-02-ch-reporting": "25.344",
+      "w-03-med-analysis": "27.456",
+      "w-04-dach-batch": "26.928",
+      "w-05-eu-render": "23.232",
+      "w-06-large-etl": "24.816",
+      "w-07-eu-training": "21.120",
+      "w-08-ch-imaging": "9.240",
+      "w-09-eu-large-model": "28.380",
+      "w-10-eu-visual": "10.488",
+      "w-11-dach-simulation": "24.816",
+      "w-12-late-delivery": "20.064",
+      "w-13-regional-index": "24.288",
+      "w-14-bulk-render": "24.816",
+      "w-15-heavy-archive": "24.288"
+    },
+    "base_points": 20000,
+    "completion_bonus": 5000,
+    "reference_gco2e_per_kwh": 200,
+    "local_weight": "3/4",
+    "shared_weight": "1/4"
+  },
+  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-lca-v1"
+}
