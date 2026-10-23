@@ -15,8 +15,9 @@ def export(catalog, destination, rules=None):
         raise ValueError("Unexpected catalog fields or impact model; inspect before public export")
     if rules is not None:
         if (set(rules) != {"rules", "cohort", "enabled", "scenario_id"}
-            or set(rules["rules"]) != {"version", "hash", "reference_energy_kwh", "base_points", "completion_bonus", "reference_gco2e_per_kwh", "local_weight", "shared_weight"}
-            or rules["rules"]["version"] != "greenops-score-v1"
+            or set(rules["rules"]) != ({"version", "hash", "reference_energy_kwh", "base_points", "completion_bonus", "reference_gco2e_per_kwh", "local_weight", "shared_weight"} | ({"impact_basis"} if rules["rules"].get("version") == "greenops-score-v2" else set()))
+            or rules["rules"]["version"] not in {"greenops-score-v1", "greenops-score-v2"}
+            or (rules["rules"]["version"] == "greenops-score-v2" and rules["rules"].get("impact_basis") != "electricity_usage")
             or rules["scenario_id"] != catalog["scenario_id"]):
             raise ValueError("Unexpected scoring rules; inspect before public export")
         destination.mkdir(parents=True, exist_ok=True)
@@ -27,7 +28,7 @@ def export(catalog, destination, rules=None):
     assets = sorted(p for p in destination.rglob("*") if p.is_file() and p.name != "manifest.json")
     manifest = {
         "schema_version": "1.0", "scenario_id": catalog["scenario_id"],
-        "provenance": catalog["provenance"], "score_policy": "frozen greenops-score-v1; see rules.json",
+        "provenance": catalog["provenance"], "score_policy": "frozen " + (rules["rules"]["version"] if rules else "greenops-score-v1") + "; see rules.json",
         "source": "public /api/catalog projection; no electricity series exported",
         "sha256": {str(p.relative_to(destination)): hashlib.sha256(p.read_bytes()).hexdigest() for p in assets},
     }

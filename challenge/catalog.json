@@ -1,5 +1,5 @@
 {
-  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-lca-v1",
+  "scenario_id": "historical-synthetic-sept-2025-v5-representative-imports-workloads-v5-15-jobs-seed-42-dc-v1-usage-score-v2-lca-v1",
   "provenance": "FICTIONAL production challenge: sponsor-selected v5 representative-import electricity; historical-derived synthetic actuals, smooth uncertain forecasts, one-hop imports (not recursive flow tracing). Existing 15 workloads, datacenter PUE, quotas and fictional France overlay retained from archived challenge pack; workload v5 sets CPU work to 14600 total vCPU-hours for scheduling slack (w-01 stays at 1000); GPU work and other workload parameters are unchanged.; owner-supplied averaged non-usage LCA rates, explicitly estimated effective IT power, time-varying electricity and challenge PUE applied once",
   "zones": [
     {

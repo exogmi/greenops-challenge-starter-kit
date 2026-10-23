@@ -162,3 +162,11 @@ for the catalog, zones and profiles are included under `challenge/schemas/`.
 Scoring reference-energy weights remain frozen at their original PUE 1.20
 benchmark; actual costs use the new datacenter values. Check the scenario/cohort
 in the manifest and run configuration. No electricity time series is distributed.
+
+## Electricity-only scoring
+
+Current public `rules.json` advertises `greenops-score-v2` and
+`impact_basis: electricity_usage`. Scores expose `scored_gco2e` for the usage cost
+used in points and tie-breaking. `total_gco2e` still includes usage plus lifecycle;
+the two component fields retain their meaning. Legacy v1 run/rules responses
+remain supported. Use the scenario and cohort matching your run.
